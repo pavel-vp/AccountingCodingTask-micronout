@@ -1,5 +1,7 @@
 # AccountingCodingTask-micronout
 A simple implementation of accounting service using Micronout framework.
+In this application, I used non-blocking approach with a task queue. Every POST called method will add a new task in queue and return its identifier. Later, we can call "status" RESP API method to know the status of the task.
+Inside application there is a Thread, that manages the task queue and executing tasks one by one, in the order they have been added in the queue. Therefore, the process that changes the data in the system is only one - there is no blocking issue.
 
 ## API
 
