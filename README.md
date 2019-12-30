@@ -5,12 +5,12 @@ Inside application there is a Thread, that manages the task queue and executing 
 
 ## API
 
-Deposit some Amount to an Account -
+- Deposit some Amount to an Account -
 POST /accounting/deposit?account=1&amount=100
 
 Returns an operation identificator of LONG type.
 
-Get status of operation -
+- Get status of operation -
 GET /accounting/status?operationid=1
 
 Returns a status of thin operation:
@@ -18,12 +18,12 @@ INPROGRESS - operation is still has not finished
 SUCCESS - operation has finished successfully
 ERROR - operation was failed (no money was transfered)
 
-Transfer some Amount from AccountFrom to an AccountTo -
+- Transfer some Amount from AccountFrom to an AccountTo -
 POST /accounting/transfer?accountfrom=1&accountto=2&amount=100
 
 Returns an operation identificator of LONG type.
 
-Get amount on the account -
+- Get amount on the account -
 GET /accounting/amount?account=1
 
 Returns an amount on the account of BigDecimal type.
