@@ -42,3 +42,8 @@ Start builds and run tests :
 Start web-server on http://localhost:8080/ :
 ./gradlew run
 
+## Things to improve
+
+- To handle huge amount of requests we can use some third-party messaging system (Kafka, for example), where we will store tasks and write another application that handles these tasks
+- Write documentation
+
